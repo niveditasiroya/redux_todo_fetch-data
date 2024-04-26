@@ -30,7 +30,9 @@ function App() {
       console.log({ id: Math.random(), value });
     }
     setValue("");
-    dispatch(addTodo({ id: Math.random(), value, checked: false, update: value }));
+    dispatch(
+      addTodo({ id: Math.random(), value, checked: false, update: value })
+    );
   };
 
   const display = useSelector((state) => state.todo);
@@ -98,9 +100,8 @@ function App() {
           </button>
         </div>
       </div>
-      <Users />
 
-      <div className="todo">
+      <div className="todo flex flex-col justify-center py-5">
         <div className="flex justify-center gap-2">
           <input
             value={value}
@@ -118,7 +119,7 @@ function App() {
           return (
             <div
               key={item.id}
-              className="flex justify-center items-center gap-7 p-3"
+              className="flex justify-center items-center gap-7 p-3 mb-5"
             >
               <div className="flex items-center gap-2">
                 <input
@@ -152,9 +153,9 @@ function App() {
           );
         })}
       </div>
+
+      <Users />
     </div>
-
-
   );
 }
 

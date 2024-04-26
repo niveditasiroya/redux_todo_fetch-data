@@ -44,7 +44,7 @@ const Users = () => {
           // console.log(data.id , value, data.id == value)
           data.id && (
             <div
-              className={`p-5 border-2 flex ${
+              className={`p-5 border-2 flex justify-center ${
                 data.isfav == true && "bg-yellow-400"
               }`}
             >
